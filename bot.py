@@ -27,7 +27,7 @@ async def _8ball(ctx, *, question):
 
 @client.command()
 async def insult(ctx, *, name):
-    curses_0 = "Chutiya.Jhaat ka baal.Lowde jesi shakal ka.Madarchod.Gaand ka dhakan.Kamina.Tharki.Behen ka lauda.Chut ka maindak.Hijra.Choot ka baal.Chullu bhar muth mein doob mar.Bhen ka taka.Kutte ka tatta.Gand Ka Khatmal".split(".")
+    curses_0 = "Chutiya.Jhaat ka baal.Lowde jesi shakal ka.Madarchod.Gaand ka dhakan.Kamina.Tharki.Behen ka lauda.Chut ka maindak.Hijra.Choot ka baal.Chullu bhar muth mein doob mar.Bhen ka taka.Kutte ka tatta.Gand Ka Khatmal.Tatto ke saudagar".split(".")
     curses_1 = "gaandu.bhosdike.lodu.suwar ki aulad.randi baj.sust lund ki padaish.mera muh me le.betichod.choot ka bhoot.choot ka pakoda.apni gaand mein muthi daalta hai.apna lund choosta hai.teri gaand main kute ka lund.tu kutte ke poot, teri maa ki choot".split(".")
     random_choice = random.choice([0,1])
     if random_choice:
