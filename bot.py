@@ -35,4 +35,8 @@ async def insult(ctx, name):
     else:
         await ctx.send(f"{random.choice(curses_0)} {name}")
 
+@client.command()
+async def clear(ctx, amount=5):
+    await ctx.channel.purge(limit=amount+1)
+
 client.run("NzU5NDI1MTk0NTIyNzA1OTcx.X29T0w.Fza69ORtAhRUtjQJXO-6H0Tg6so")
