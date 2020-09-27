@@ -13,11 +13,6 @@ class Utility(commands.Cog):
     @commands.command()
     async def servername(self, ctx):
         await ctx.send(f"{ctx.guild.name}")
-    
-    @commands.command()
-    @commands.has_permissions(manage_messages=True)
-    async def clear(self, ctx, amount=5):
-        await ctx.channel.purge(limit=amount+1)
 
 def setup(client):
     client.add_cog(Utility(client))
