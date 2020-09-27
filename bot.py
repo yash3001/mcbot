@@ -3,7 +3,7 @@ from  discord.ext import commands
 import random
 import os
 
-client = commands.Bot(command_prefix = "mc ")
+client = commands.Bot(command_prefix = ["Mc ", "mc ", "mC ", "MC "])
 
 @client.command()
 async def load(ctx, extension=""):

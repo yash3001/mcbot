@@ -16,11 +16,8 @@ class Fun(commands.Cog):
             await ctx.send("You have to ask a question idiot") 
 
     @commands.command()
-    async def slap(self, ctx, *, reason=""):
-        if reason != "":
-            await ctx.send(f"{ctx.author} slapped {random.choice(ctx.guild.members)}. Reason *{reason}*")
-        else:
-            await ctx.send("You can't just slap someone for no reason")
+    async def slap(self, ctx):
+        await ctx.send(f"{ctx.author.mention} slapped {random.choice(ctx.guild.members).mention}")
 
 def setup(client):
     client.add_cog(Fun(client))
