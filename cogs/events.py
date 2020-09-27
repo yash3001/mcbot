@@ -8,6 +8,7 @@ class Events(commands.Cog):
 
     @commands.Cog.listener()
     async def on_ready(self):
+        await self.client.change_presence(status=discord.Status.idle, activity=discord.Game("with your mind"))
         print("Bot is ready")
 
     @commands.Cog.listener()
