@@ -21,6 +21,15 @@ async def unload(ctx, extension=""):
     else:
         await ctx.send("You have to provide the name of the extension")
 
+@client.command()
+async def reload(ctx, extension=""):
+    if extension != "":
+        client.unload_extension(f"cogs.{extension}")
+        client.load_extension(f"cogs.{extension}")
+        await ctx.send(f"{extension} reloaded")
+    else:
+        await ctx.send("You have to provide the name of the extension")
+
 for filename in os.listdir("./cogs"):
     if filename.endswith('.py'):
         client.load_extension(f"cogs.{filename[:-3]}")
