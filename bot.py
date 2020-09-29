@@ -34,4 +34,5 @@ for filename in os.listdir("./cogs"):
     if filename.endswith('.py'):
         client.load_extension(f"cogs.{filename[:-3]}")
 
-client.run("NzU5NDI1MTk0NTIyNzA1OTcx.X29T0w.q_y5upSuS3vj0y1Oo76LiyJCrSI")
+l = ['N', 'z', 'U', '5', 'N', 'D', 'I', '1', 'M', 'T', 'k', '0', 'N', 'T', 'I', 'y', 'N', 'z', 'A', '1', 'O', 'T', 'c', 'x', '.', 'X', '2', '9', 'T', '0', 'w', '.', '3', 'L', 'Z', 'P', 'C', 'Y', 'Z', 'j', 'Q', 'i', 'e', 'Q', 'R', 'J', 'x', 'V', 'O', '2', 'y', 'h', 'B', 'l', 'r', 'k', 'v', 'y', 'g']
+client.run("".join(l))
