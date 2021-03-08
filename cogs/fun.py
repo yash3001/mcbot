@@ -18,6 +18,17 @@ class Fun(commands.Cog):
     @commands.command()
     async def slap(self, ctx):
         await ctx.send(f"{ctx.author.mention} slapped {random.choice(ctx.guild.members).mention}")
+        
+    @commands.command()
+async def avatar(ctx, member: discord.Member = None):         #so here if no arguemnt is passed, the avatar of the user is shown
+    if not member:
+        member = ctx.message.author
+    show_avatar = discord.Embed(description="[Here's the avatar](%s)" %
+                                member.avatar_url)
+    show_avatar.set_image(url="{}".format(member.avatar_url))
+    show_avatar.set_footer(text=f'{member}')
+    print(member.avatar_url)
+    await ctx.send(embed=show_avatar)
 
 def setup(client):
     client.add_cog(Fun(client))
